@@ -18,7 +18,7 @@ Maggie's Website that will be added to Main Website:
 https://github.com/maggient/maggient.github.io 
 
 ------------------------------------------------------------------------------------------------------
-Iteration 1 P5 disgital art code: 
+Maggie Nguyen's Iteration 1 P5 disgital art code: 
 function setup() {
   createCanvas(1000, 1000); //(width, length) 
 }
