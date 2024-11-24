@@ -12,7 +12,7 @@ Iteration 1 Plans:
 - I will have my personal link website 
 - I will provide a short description of who I am 
 - I will create my p5.js sketch
-- I will include a digital graphic using p5 (generative factors will be included later on) 
+- I will include a digital graphic using p5 on my website(generative factors will be included later on) 
 
 Maggie's Website that will be added to Main Website: 
 https://maggient.github.io/ 
@@ -22,11 +22,14 @@ https://github.com/maggient/maggient.github.io
 
 ------------------------------------------------------------------------------------------------------
 Maggie Nguyen's Iteration 1 P5 disgital art code: 
-function setup() {
-  createCanvas(1000, 1000); //(width, length) 
-}
-
-function draw() {
+//Maggie Nguyen - Rainbow Squares 
+  
+  function setup() {
+  createCanvas(1000, 1000); //1000x1000 square canvas
+  background(225); //white background
+  }
+      
+  function draw() {
   background(225); //sets background to white 
   const r = color(255, 0, 0); //red using RGB 
   const o = color(255, 165, 0); //orange 
@@ -80,6 +83,5 @@ function draw() {
   rect(475, 475, 50, 50);
   fill(o);
   rect(488, 488, 25, 25);
-
 } //end of Rainbow Squares on top of eachother design 
 ------------------------------------------------------------------------------------------------------
