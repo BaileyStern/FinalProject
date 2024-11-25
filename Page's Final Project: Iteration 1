@@ -4,12 +4,12 @@ November 24, 2024
 
 Project Implementation Summary 
 
-For the overall idea of our project, we plan to have one website that will contain links to each of our own websites (3 total) displaying each of our generative art pieces. Each website will give a short description of what the generative art is and how viewers can interact with it. 
+For the overall idea of our project, we plan to have one website that will contain links to each of our own websites (3 total) 
+displaying each of our generative art pieces. Each website will give a short description of what the generative art is and how viewers can interact with it. 
 
-For my part of the project so far I have used my personal github website, that I previously created in this class, and will add my generative art visuals. Currently, I have only written the code for the visuals  and plan on uploading them to my personal website once I have finalized what I want it to look like.
-
-Functions: Everytime the user mouse clicks on the screen a shape appears. However, on every click a random shape and color appears. In addition, the user can use the up and down arrows to adjust the size of the next shape before clicking again. I wanted my piece to be more interactive so that users can create their own generative art.  
-
+For my part of the project so far I have used my personal github website, that I previously created in this class, and will add my generative art visuals. 
+Everytime the user mouse clicks on the screen a shape appears. However, on every click the shape and color will be random. In addition, the user can use 
+the up and down arrows to adjust the size of the next shape before clicking again. I wanted my piece to be more interactive so that users can create their own generative art.  
 
 Final Project Group Repository: https://github.com/BaileyStern/FinalProject 
 
@@ -27,10 +27,6 @@ let size = 50; //preset size
 function setup() {
   createCanvas(400, 400);
 }
-
-function draw() {
-    // No continuous drawing is needed, shapes will appear on mouse press
-  }
 
 function mousePressed() { //when ever the mouse is clicked a random shape will appear
   let shapeType = floor(random(4)); //Chooses a random number between 0 and 3 for shapes, and each number represents a different shape
