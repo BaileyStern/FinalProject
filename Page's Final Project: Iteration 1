@@ -28,6 +28,10 @@ function setup() {
   createCanvas(400, 400);
 }
 
+function draw() {
+    // No continuous drawing is needed, shapes will appear on mouse press
+  }
+
 function mousePressed() { //when ever the mouse is clicked a random shape will appear
   let shapeType = floor(random(4)); //Chooses a random number between 0 and 3 for shapes, and each number represents a different shape
   let x = mouseX;
