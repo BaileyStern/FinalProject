@@ -1,1 +1,153 @@
+P.M.B. Final Project 
 
+Final project GitHub Pages site: https://pjpowell24.github.io/
+
+Page Final Contributions: 
+Page’s Website: https://pagepowell25.github.io/
+Page’s Website Repository: https://github.com/pagepowell25/pagepowell25.github.io
+Final project repository: https://github.com/BaileyStern/FinalProject
+
+Changes from Iteration 2: The major change in my code for the final iteration that I made from iteration 2 is that the viewers can now hold down their mouse and drag to create duplicates of different shapes. In iteration 2, viewers were only able to do a single mouse click to create one random shape with a random color. With the drag option they can draw using the randomly generated shapes. This adds an extra feature for users to generate their own artwork. 
+
+Code: 
+let size = 50; //preset size
+
+function setup() {
+  createCanvas(700, 500);
+  background(245, 245, 220); // Sets the canvas background to beige so viewers can see it
+}
+function draw() {
+  //not needed to draw but for p5
+}
+function mousePressed() { //when ever the mouse is clicked a random shape will appear
+  drawRandomShape(mouseX, mouseY); // Draw a random shape at the mouse position
+}
+function mouseDragged() { //when the mouse is dragged, the object is duplicated
+  drawRandomShape(mouseX, mouseY); // Draw a random shape at the mouse position
+}
+function keyPressed() {  //when the "a" and "d" keys are pressed the user can change the shape's size
+  if (key === 'd' || key === 'D') { // Checks if the 'D' key is pressed
+    size = max(10, size - 2); // Decreases size by 2 every time 'D' is pressed
+  } else if (key === 'a' || key === 'A') { // Checks if the 'A' key is pressed
+    size += 2; // Increases size by 2 every time 'A' is pressed
+  }
+}
+function drawRandomShape(x, y) {
+  let shapeType = floor(random(4)); // Chooses a random number between 0 and 3 for shapes, and each number represents a different shape
+  // Generates random RGB values for each shape generated
+  let r = random(255);
+  let g = random(255);
+  let b = random(255);
+  // Set the random fill color
+  fill(r, g, b);
+   switch (shapeType) { // Different shapes that could be produced on each mouse click
+    case 0:
+      ellipse(x, y, size, size); // Circle
+      break;
+    case 1:
+      rect(x, y, size, size); // Square
+      break;
+    case 2:
+      triangle(x, y, x + size, y, x, y + size); // Triangle
+      break;
+    case 3:
+      let x2 = x + random(-size, size); // Produces random line
+      let y2 = y + random(-size, size);
+      line(x, y, x2, y2);
+      break;
+  }
+} 
+
+
+Maggie Final Contributions: 
+Maggie’s Website(this website is included in the group’s main website): 
+https://maggient.github.io/ 
+*******Maggie's Github:*******
+https://github.com/maggient/maggient.github.io 
+
+
+Original Plan: I plan on having my digital art be manipulated by the audience. I also want to include a personal factor for the audience by incorporating their name(would type their name using keyboard) in this graphic. The digital art would display their name and there would be generative decorations that will surround the name.
+Updated Plan: From iteration 1 and 2, there were no interactive factors. Iteration 2 included the flashing text: “MAGGIENGUYEN” as the center text of the graphic. Users are now able to input their name when the website loads(interactive factor). Their names will be “flashing” which is created by the quick random generation of colors(generative factor). 
+Code: 
+//Maggie Nguyen - Rainbow Squares 
+let userInput = ""; //stores input 
+
+function setup() {
+  createCanvas(1000, 1000); //1000x1000 square canvas
+  background(225); //white background
+  userInput = prompt("Hello, welcome to Maggie's Website. Please enter your name for website personalization:");
+}
+
+function draw() {
+  background(225); //sets background to white 
+
+  const r = color(255, 0, 0); //red using RGB 
+  const o = color(255, 165, 0); //orange 
+  const y = color(255, 255, 0); //yellow
+  const g = color(0, 255, 0); //green 
+  const b = color(0, 0, 255); //blue 
+  const p = color(128, 0, 128); //purple 
+
+  
+  fill(255);
+  rect(0, 0, 1000, 1000); //side to side, up down, width, length 
+  fill(r); 
+  rect(25, 25, 950, 950);
+  fill(o);
+  rect(50, 50, 900, 900);
+  fill(y);
+  rect(75, 75, 850, 850);
+  fill(g);
+  rect(100, 100, 800, 800);
+  fill(b);
+  rect(125, 125, 750, 750);
+  fill(p);
+  rect(150, 150, 700, 700);
+  fill(r); 
+  rect(175, 175, 650, 650);
+  fill(o);
+  rect(200, 200, 600, 600);
+  fill(y);
+  rect(225, 225, 550, 550);
+  fill(g);
+  rect(250, 250, 500, 500);
+  fill(b);
+  rect(275, 275, 450, 450);
+  fill(p);
+  rect(300, 300, 400, 400);
+  fill(r); 
+  rect(325, 325, 350, 350);
+  fill(o);
+  rect(350, 350, 300, 300);
+  fill(y);
+  rect(375, 375, 250, 250);
+  fill(g);
+  rect(400, 400, 200, 200);
+  fill(b);
+  rect(425, 425, 150, 150);
+  fill(p);
+  rect(450, 450, 100, 100);
+  fill(r); 
+  rect(475, 475, 50, 50);
+  fill(o);
+  rect(488, 488, 25, 25);
+
+
+  if (frameCount % 2 === 0) {
+    fill(random(255), random(255), random(255)); //random colors
+  } else {
+    fill(255); //white text
+  }
+  
+  textSize(115); //font size
+  textAlign(CENTER, CENTER); //aligns text
+  
+    if (userInput) {
+    text(userInput.toUpperCase(), width / 2, height / 2); //makes letters uppercase 
+  } else {
+    text("HELLO USER", width / 2, height / 2);
+  }
+} //end of Rainbow Squares
+
+
+Bailey Final Contributions: 
